@@ -22,57 +22,58 @@
       background: rgb(80, 80, 80);
       border-radius: 50px;
     }
-
-
     .image-right{
       float: right;
       flex: 1;
       text-align: right;
     }
-
     .image-left{
       float: left;
       flex: 1;
       text-align: right;
     }
-
     img {
       width: 20vw;
       height: auto;
       display: block;
       border-radius: 50px;
     }
-
-
-
-    .text-right{
+    .text-right-desc{
+      color: rgb(255, 255, 255);
+      text-align: left;
+      font-size: 1.5vw;
+      flex: 1;
+    }
+    .text-right-info{
       color: rgb(255, 255, 255);
       text-align: left;
       font-size: 2vw;
       flex: 1;
     }
-
     .text-right-title{
       color: rgb(255, 255, 255);
       text-align: left;
-      font-size: 3vw;
+      font-size: 4vw;
       flex: 1;
     }
-
-    .text-left{
+    .text-left-desc{
+      color: rgb(255, 255, 255);
+      text-align: right;
+      font-size: 1.5vw;
+      flex: 1;
+    }
+    .text-left-info{
       color: rgb(255, 255, 255);
       text-align: right;
       font-size: 2vw;
       flex: 1;
     }
-
     .text-left-title{
       color: rgb(255, 255, 255);
       text-align: right;
       font-size: 4vw;
       flex: 1;
     }
-
     .text{
       color: rgb(255, 255, 255);
       text-align: center;
@@ -96,10 +97,11 @@
         <div class="container">
           <div class="text">
             <h1 class="text-right-title"> Sunescape </h1>
-            <p class="text-right"> Engine: Unity <br> Platform: Pc <br>
-              <br> I was part of the Sunescape project during 2023 summer. 
-              <br> This was the first so called long project I have done while studying in KAMK.
-              <br> For this project I made the mission selection menu and the inventory system. 
+            <p class="text-right-info"> Engine: Unity <br> Platform: Pc <br> Timeline: Summer of 2023  </p>
+            <p class="text-right-desc">
+              <br> Sunescape was the first project where we got to polish it while studying in KAMK.
+              <br> I made the mission selection menu and the inventory system for Sunescape. 
+              <br> We entered Sunescape to the Assembly Summer 2023 GameDev competition and placed 5th out of 12 participants.
             </p> 
           </div>
           <div class="image" style="align-content: end;">
@@ -115,10 +117,10 @@
           </div>
           <div class="text">
             <h1 class="text-left-title"> MehuSim </h1>
-            <p class="text-left">  Engine: Unity <br> platform: Pc Vr <br>
-              <br> I was part of the mehuSim project from spring to early summer in 2023
-              <br> This was my first time doing anything with VR.
-              <br> For this project I made most of the side content. E.g. Tv, Radio, Rat & the gun
+            <p class="text-left-info">  Engine: Unity <br> platform: Pc Vr <br> Timeline: spring to early summer of 2023 </p>
+            <p class="text-left-desc">
+              <br> MehuSim was my first project where I've done anything with VR.
+              <br> I made most of the side content. E.g. Tv, Radio, Rat & the gun for MehuSim.
             </p>
           </div>
         </div>
@@ -127,8 +129,12 @@
         <!-- ERP -->
         <div class="container">
           <div class="text">
-            <h1 class="text-right-title"> Entitled Roguelike Project </h1>
-            <p class="text-right"> Description </p>
+            <h1 class="text-right-title"> Entitled Roguelike Project (ERP) </h1>
+            <p class="text-right-info"> Engine: Unity <br> Platform: Pc <br> Timeline: Spring to early summer of 2022 </p>
+            <p class="text-right-desc">
+            <br>  Entitled Roguelike Project (ERP) was the first project where I did something usefull for a project.
+            <br>  I made the enemies, some of the weapons & level obstacles for ERP.
+            </p>
           </div>
           <div class="image" style="align-content: end;">
             <img src="images/Erp.png" alt="erp" class="image-right">
@@ -143,7 +149,11 @@
           </div>
           <div class="text">
             <h1 class="text-left-title"> Shank Simulator </h1>
-            <p class="text-left"> Description </p>
+            <p class="text-left-info"> Engine: Unity <br> Platform: Pc <br> Timeline: Winter to early spring of 2022 </p>
+            <p class="text-left-desc">
+              <br>  Shank Simulator was the first project I've done and it shows.
+              <br>  I made the menus & HUD for Shank.
+            </p>
           </div>
         </div>
     </div>
@@ -160,7 +170,12 @@
       <div class="container">
         <div class="text">
           <h1 class="text-right-title"> Iron Mice From Hell </h1>
-          <p class="text-right"> Description </p>
+          <p class="text-right-info"> Engine: Unity <br> Platform: Pc <br> Timeline: July 2023 </p>
+          <p class="text-right-desc">
+            <br> Iron Mice From Hell was the first game jam game I have made and it was made for MouseJam2023.
+            <br> I made the playable character & UI for Iron Mice.
+            <br> Iron Mice placed 5th out of 50 participants.
+          </p>
         </div>
         <div class="image" style="align-content: end;">
           <img src="images/IronMice.png" alt="mice" class="image-right">
@@ -175,7 +190,12 @@
         </div>
         <div class="text">
           <h1 class="text-left-title"> MadGoat </h1>
-          <p class="text-left"> Description </p>
+          <p class="text-left-info"> Engine: Unity <br> Platform: Pc <br> Timeline: November 2023 </p>
+          <p class="text-left-desc">
+            <br> MadGoat was my second game jam game and it was made for Kekrijam 2023.
+            <br> I made the flamable objects for MadGoat.
+            <br> It was also my first time using lights in Unity.
+          </p>
         </div>
       </div>
       
@@ -184,15 +204,18 @@
       <div class="container">
         <div class="text">
           <h1 class="text-right-title"> Oink Oink Blaster </h1>
-          <p class="text-right"> Description </p>
+          <p class="text-right-info"> Engine: Godot <br> Platform: Pc <br> Timeline: January 2024 </p>
+          <p class="text-right-desc">
+            <br> Oink Oink Blaster was my third game jam game and it was made for FGJ 2023.
+            <br> I made the enemies and HUD for Oink Oink Blaster. 
+            <br> This was also my first time using Godot as a game engine.
+          </p>
         </div>
         <div class="image" style="align-content: end;">
           <img src="images/OinkOink.png" alt="oink" class="image-right">
         </div>
       </div>
     </div>
-      
-      
-    </body>
-    </html>
+  </body>
+</html>
     
