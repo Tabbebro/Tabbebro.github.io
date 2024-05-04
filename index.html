@@ -7,19 +7,26 @@
   </head>
 
   <style>
+    body{
+      background-color: #b4b4b4;
+
+      font-size: 0.8vw;
+      color:#ffffff
+    }
+
     .container{
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 20px;
+      padding: 2vw;
 
-      margin-top: 20px;
-      margin-bottom: 20px;
-      margin-left: 5vw;
-      margin-right: 5vw;
+      margin-top: 4vw;
+      margin-bottom: 4vw;
+      margin-left: 7vw;
+      margin-right: 7vw;
 
-      border: 1px solid rgb(80, 80, 80);
-      background: rgb(80, 80, 80);
+      border: 6px solid rgba(22, 22, 22, 0.8);
+      background: rgba(22, 22, 22, 0.6);
       border-radius: 50px;
     }
     .image-right{
@@ -36,57 +43,69 @@
       width: 20vw;
       height: auto;
       display: block;
+      border: 3px solid rgb(80, 80, 80);
       border-radius: 50px;
     }
     .text-right-desc{
-      color: rgb(255, 255, 255);
       text-align: left;
-      font-size: 1.5vw;
+      font-size: 1em;
       flex: 1;
     }
     .text-right-info{
-      color: rgb(255, 255, 255);
       text-align: left;
-      font-size: 2vw;
+      font-size: 1.1em;
       flex: 1;
     }
     .text-right-title{
-      color: rgb(255, 255, 255);
       text-align: left;
-      font-size: 4vw;
+      font-size: 1.2em;
       flex: 1;
     }
     .text-left-desc{
-      color: rgb(255, 255, 255);
       text-align: right;
-      font-size: 1.5vw;
+      font-size: 1em;
       flex: 1;
     }
     .text-left-info{
-      color: rgb(255, 255, 255);
       text-align: right;
-      font-size: 2vw;
+      font-size: 1.1em;
       flex: 1;
     }
     .text-left-title{
-      color: rgb(255, 255, 255);
       text-align: right;
-      font-size: 4vw;
+      font-size: 1.2em;
       flex: 1;
     }
     .text{
-      color: rgb(255, 255, 255);
       text-align: center;
-      font-size: 4vw;
+      font-size: 2em;
       flex: 1;
     }
 
   </style>
-  <body style="background-color: rgb(26, 26, 26);">
+  <body>
     
-    <div class="Projects">
+        <!-- right -->
+        <!-- Sunescape -->
+        <div class="container">
+          <div class="text">
+            <h1 class="text-right-title"> Taavi Korhonen </h1>
+            <p class="text-right-info"> Languages: C#, C++ <br> Engines: Unity, Unreal Engine 5 </p>
+            <p class="text-right-desc">
+              <br> Hello. I'm Taavi Korhonen and I'm currently studying game programming in KAMK.
+              <br> I have been studying game programming for 3 years now.
+              <br> Mostly I like to program UI stuff for projects & fortunately I've got the chance to make UI for the most part.
+              <br> Below I have listed all of the published projects & game jams I have been part of.
+            </p> 
+          </div>
+          <div class="image" style="align-content: end;">
+            <img src="images/Pfp.png" alt="Pfp" class="image-right">
+          </div>
+        </div>
 
-        <div class="container" style="background-color: rgb(40, 40, 40);">
+
+    <div class="Projects">
+        <div class="container">
           <div class="text">
             <h1> School Projects </h1>  
           </div>  
@@ -159,7 +178,7 @@
     </div>
     
     <div class="Jams">
-      <div class="container" style="background-color: rgb(40, 40, 40);">
+      <div class="container">
         <div class="text">
           <h1> Jams </h1>  
         </div>  
