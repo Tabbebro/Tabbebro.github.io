@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Taavi Korhonen - Jams</title>
+        <link rel="icon" type="image/x-icon" href="images/letterT.svg">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=devude-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+
+    <div class="header">
+        <h1>Taavi Korhonen</h1>
+        <p>Programmer</p>
+    </div>
+    
+    <div class="navbar">
+        <p><a href="index.html"><img src="images/home.svg" alt="home" class="imageHeader"> Home</a></p>
+        <p><a href="game.html"><img src="images/game.svg" alt="game" class="imageHeader"> Projects</a></p>
+        <p><a href="jam.html"><img src="images/jam.svg" alt="jam" class="imageHeader"> Jams</a></p>
+        <p><a href="contact.html"><img src="images/contact.svg" alt="contact" class="imageHeader"> Contacts</a></p>
+    </div>
+
+        <div class="row">
+            <div class="hide">
+                <div class="main">
+                    <h1>Title</h1>
+                    <p class="main-info">Released: <a href="https://tabbebro.itch.io/" target="_blank" rel="noopener noreferrer">Itch.io</a></p>
+                    <p class="main-info">Platform: </p>
+                    <p class="main-info">Engine: </p>
+                    <p class="main-info">Timeline</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae eveniet, vero blanditiis cumque perferendis maiores tempore labore voluptate neque debitis ea quis et quibusdam accusamus eligendi consectetur sequi placeat distinctio?</p>
+                    <p>Accusantium aspernatur quam eaque numquam laborum sed ipsa saepe! Eum ea nulla corporis, enim ut neque provident. Expedita deserunt ratione vero possimus aspernatur eligendi, similique eum asperiores architecto minus accusantium?</p>
+                    <p>Neque sint quam nam deserunt quasi et accusantium eveniet voluptas repudiandae laborum maxime totam sapiente consectetur tenetur voluptatibus quaerat, ea quia id possimus repellendus iure ratione. Dicta ducimus possimus ullam.</p>
+                    <p>Iure, repellendus commodi eos hic voluptatum quis veritatis autem qui eius, repellat modi ea quisquam, debitis libero maxime soluta optio vitae pariatur. Voluptate debitis nemo veritatis quasi quo, eveniet corrupti!</p>
+                    <p>Inventore temporibus iusto facilis odit necessitatibus ratione reprehenderit, aspernatur, vitae, totam impedit architecto molestiae. Eligendi, vel. Earum officiis, quidem similique quisquam exercitationem aut nemo deleniti impedit doloribus at quam odio!</p>
+                </div>
+                
+                <div class="side">
+                    <h1>Images Here</h1>
+                </div>
+                <button type="button">Read More</button>
+            </div>
+        </div>
+        
+    
+    <div class="footer">
+        <div class="footerInfo">
+            <p> Copyright &copy; <script>document.write(new Date().getFullYear())</script> Taavi Korhonen</p>    
+        </div>
+        
+        <div class="footerContent">
+            <p><a href="https://tabbebro.itch.io/" target="_blank" rel="noopener noreferrer"><img src="images/itch.svg" alt="itch" class="imageFooter"></a></p>
+            <p><a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer"><img src="images/linkedin.svg" alt="linkedin" class="imageFooter"></a></p>
+            <p><a href="https://github.com/Tabbebro" target="_blank" rel="noopener noreferrer"><img src="images/github.svg" alt="github" class="imageFooter"></a></p>
+        </div>
+    </div>
+
+
+
+    </body>
+
+    <script>
+        let hide = document.querySelectorAll(".hide")
+
+        hide.forEach(element => {
+            let button = element.querySelector("button");
+            button.onclick = function(){
+                element.classList.toggle("show");
+                button.classList.toggle("show_button");
+                if(button.classList.contains("show_button")){
+                    button.innerHTML = "Read Less";
+                }
+                else{
+                    button.innerHTML = "Read More";
+                }
+            }
+        });
+    </script>
+</html>

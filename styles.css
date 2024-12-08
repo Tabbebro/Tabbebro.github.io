@@ -1,0 +1,193 @@
+html{
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #808080;
+    margin: 0;
+    position: relative;
+    min-height: 100%;
+    box-sizing: inherit;
+    padding-bottom: 6rem;
+}
+
+.header {
+    padding: 15px;
+    text-align: left;
+    background: #6d0d85;
+    color: white;
+}
+
+.header h1{
+    font-size: 40px;
+}
+
+.imageHeader{
+    width: 15px;
+    height: 15px;
+}
+
+.navbar{
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    filter:invert(100%);
+    background-color: #222222;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.row{
+    background-color: #e4e4e4;
+    color: black;
+    padding: 20px;
+    margin: 10px auto;
+    width: 95%;
+    border-radius: 20px;
+    overflow-y: auto;
+}
+
+.main{
+    padding: 0 20px;
+    flex: 70%;
+    text-align: justify;
+}
+
+.main-info{
+    line-height: .3;
+}
+
+.side{
+    padding: 0 20px;
+    flex: 30%;
+    text-align: justify;
+}
+
+.hide{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0px;
+    height: 150px;
+}
+
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 20px 0px;
+}
+
+.show{
+    height: auto;
+}
+
+button{
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: blue;
+    background-color: transparent;
+    padding: 1px 0px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+button:after{
+    position: absolute;
+    content: "";
+    right: 0px;
+    left: 0px;
+    bottom: -20px;
+    height: 80px;
+    background: linear-gradient(180deg, #e4e4e4a1, #e4e4e4, #e4e4e4);
+    z-index: -1;
+}
+
+.show_button{
+    position: unset;
+    width: 100%;
+}
+
+.show_button:after{
+    background: transparent;
+}
+
+#more{display: none;}
+
+@media screen and (max-width: 400px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .navbar a{
+        float: none;
+        width: 100%;
+    }
+}
+
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: #6d0d85;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}
+
+.footerContent{
+    display: flex;
+    flex-wrap: wrap;
+    
+    text-align: left;
+    color: white;
+    padding: 0 20px;
+}
+
+.footerContent a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0px 5px;
+    text-decoration: none;
+}
+
+.footerInfo{
+    padding-top: 5px;
+    color: white;
+}
+
+.imageFooter{
+    width: 25px;
+    height: 25px;
+}
+
+.imageFooter:hover{
+    filter:invert(100%);
+}
