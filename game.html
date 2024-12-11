@@ -22,6 +22,137 @@
         <p><a href="contact.html"><img src="images/contact.svg" alt="contact" class="imageHeader"> Contacts</a></p>
     </div>
     
+    <div class="row">
+        <div class="hide">
+            <div class="main">
+                <h1>Time Thrall</h1>
+                <p class="main-info">Unreleased</p>
+                <p class="main-info">Platform: Pc</p>
+                <p class="main-info">Engine: Unity</p>
+                <p class="main-info">Timeline: 2024 (6 months)</p>
+                <p>
+                    <br>Write Stuff here
+                </p>
+            </div>
+            <div class="side">
+            </div>
+            <button type="button">Read More</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="hide">
+            <div class="main">
+                <h1>Arena Shooter Supreme</h1>
+                <p class="main-info">Unreleased</p>
+                <p class="main-info">Platform: Pc</p>
+                <p class="main-info">Engine: Unreal Engine 5</p>
+                <p class="main-info">Timeline: 2023 (3 months)</p>
+                <p>
+                    <br>Write Stuff here
+                </p>
+            </div>
+            <div class="side">
+            </div>
+            <button type="button">Read More</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="hide">
+            <div class="main">
+                <h1>Sunescape</h1>
+                <p class="main-info">Released: <a href="https://rockatana.itch.io/sunescape" target="_blank" rel="noopener noreferrer">Itch.io</a></p>
+                <p class="main-info">Platform: Pc</p>
+                <p class="main-info">Engine: Unity</p>
+                <p class="main-info">Timeline: 2023 (2 months)</p>
+                <p>
+                    <br>Sunescape was the first project where we got to polish it while studying in KAMK.
+                    <br>I made the mission selection menu and the inventory system for Sunescape.
+                    <br>We entered Sunescape to the Assembly Summer 2023 GameDev competition and placed 5th out of 12 participants. 
+                </p>
+            </div>
+            <div class="side">
+            </div>
+            <button type="button">Read More</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="hide">
+            <div class="main">
+                <h1>MehuSim</h1>
+                <p class="main-info">Released: <a href="https://kuuttisnu.itch.io/mehusim" target="_blank" rel="noopener noreferrer">Itch.io</a></p>
+                <p class="main-info">Platform: Pc VR</p>
+                <p class="main-info">Engine: Unity</p>
+                <p class="main-info">Timeline: 2023 (3 months)</p>
+                <p>
+                    <br>MehuSim was my first project where I've done anything with VR.
+                    <br>I made most of the side content. E.g. Tv, Radio, Rat & the gun for MehuSim. 
+                </p>
+            </div>
+            <div class="side">
+            </div>
+            <button type="button">Read More</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="hide">
+            <div class="main">
+                <h1>Moo Moo Madness</h1>
+                <p class="main-info">Released: <a href="https://play.google.com/store/apps/details?id=com.KulkuriGames.MooMooMadness&hl=en_US" target="_blank" rel="noopener noreferrer">Playstore</a></p>
+                <p class="main-info">Platform: Mobile</p>
+                <p class="main-info">Engine: Unity</p>
+                <p class="main-info">Timeline: 2022 (3 months)</p>
+                <p>
+                    <br>Moo Moo Madness was my first mobile project.
+                    <br>I made the UI and the cow customization for Moo Moo Madness. 
+                </p>
+            </div>
+            <div class="side">
+            </div>
+            <button type="button">Read More</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="hide">
+            <div class="main">
+                <h1>Entitled Roguelike Project (ERP)</h1>
+                <p class="main-info">Released: <a href="https://hunts.itch.io/erp" target="_blank" rel="noopener noreferrer">Itch.io</a></p>
+                <p class="main-info">Platform: Pc</p>
+                <p class="main-info">Engine: Unity</p>
+                <p class="main-info">Timeline: 2022 (3 months)</p>
+                <p>
+                    <br>Entitled Roguelike Project (ERP) was the first project where I did something usefull for a project.
+                    <br>I made the enemies, some of the weapons & level obstacles for ERP.
+                </p>
+            </div>
+            <div class="side">
+            </div>
+            <button type="button">Read More</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="hide">
+            <div class="main">
+                <h1>Shank Simulator</h1>
+                <p class="main-info">Released: <a href="https://hunts.itch.io/shank-simulator" target="_blank" rel="noopener noreferrer">Itch.io</a></p>
+                <p class="main-info">Platform: Pc</p>
+                <p class="main-info">Engine: Unity</p>
+                <p class="main-info">Timeline: 2022 (3 months)</p>
+                <p>
+                    <br>Shank Simulator was the first project I've done and it shows.
+                    <br>I made the menus & HUD for Shank. 
+                </p>
+            </div>
+            <div class="side">
+            </div>
+            <button type="button">Read More</button>
+        </div>
+    </div>
 
     <div class="footer">
         <div class="footerInfo">
@@ -35,5 +166,23 @@
         </div>
     </div>
     </body>
+
+    <script>
+        let hide = document.querySelectorAll(".hide")
+
+        hide.forEach(element => {
+            let button = element.querySelector("button");
+            button.onclick = function(){
+                element.classList.toggle("show");
+                button.classList.toggle("show_button");
+                if(button.classList.contains("show_button")){
+                    button.innerHTML = "Read Less";
+                }
+                else{
+                    button.innerHTML = "Read More";
+                }
+            }
+        });
+    </script>
 
 </html>

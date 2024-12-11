@@ -5,7 +5,7 @@ html{
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #808080;
+    background-color: #404040;
     margin: 0;
     position: relative;
     min-height: 100%;
@@ -31,7 +31,7 @@ body {
 
 .navbar{
     overflow: hidden;
-    background-color: #333;
+    background-color: #303030;
 }
 
 .navbar a{
@@ -53,13 +53,18 @@ body {
 }
 
 .row{
-    background-color: #e4e4e4;
-    color: black;
+    background-color: #303030;
+    color: white;
     padding: 20px;
     margin: 10px auto;
     width: 95%;
     border-radius: 20px;
     overflow-y: auto;
+}
+
+.row h1{
+    color: #af11d6;
+    border-style: none none solid none;
 }
 
 .main{
@@ -106,7 +111,7 @@ button{
     border: none;
     font-size: 20px;
     font-weight: bold;
-    color: blue;
+    color: #af11d6;
     background-color: transparent;
     padding: 1px 0px;
     z-index: 1;
@@ -120,7 +125,7 @@ button:after{
     left: 0px;
     bottom: -20px;
     height: 80px;
-    background: linear-gradient(180deg, #e4e4e4a1, #e4e4e4, #e4e4e4);
+    background: linear-gradient(180deg, #303030a1, #303030, #303030);
     z-index: -1;
 }
 
@@ -153,7 +158,7 @@ button:after{
     flex-wrap: wrap;
     padding: 20px;
     background: #6d0d85;
-
+    
     position: absolute;
     bottom: 0;
     width: 100%;
