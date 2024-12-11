@@ -80,7 +80,16 @@ body {
 .side{
     padding: 0 20px;
     flex: 30%;
-    text-align: justify;
+    text-align: center;
+}
+
+.sideImage{
+    /* width: 315px; */
+    /* height: 250px; */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .hide{
@@ -89,7 +98,7 @@ body {
     overflow: hidden;
     position: relative;
     padding: 20px 0px;
-    height: 150px;
+    height: 250px;
 }
 
 .wrapper{
