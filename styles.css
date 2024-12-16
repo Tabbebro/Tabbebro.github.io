@@ -52,19 +52,30 @@ body {
     box-sizing: border-box;
 }
 
+.imageTitle{
+    width: 22px;
+    height: 22px;
+    /* filter: drop-shadow(0px 100px 0 #af11d6);
+    transform: translateY(-100px); */
+}
+
 .row{
     background-color: #303030;
-    color: white;
     padding: 20px;
     margin: 10px auto;
     width: 95%;
     border-radius: 20px;
     overflow-y: auto;
+    color: white;
 }
 
 .row h1{
     color: #af11d6;
     border-style: none none solid none;
+}
+
+.row p{
+    text-indent: 2% each-line;
 }
 
 .main{
