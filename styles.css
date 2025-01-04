@@ -78,19 +78,24 @@ body {
     margin-left: 2%;
 }
 
-.main{
+.title{
     padding: 0 20px;
     flex: 70%;
     text-align: left;
 }
 
-.main-info{
+.title-info{
     line-height: .3;
+}
+
+.content{
+    padding: 0 20px;
+    text-align: left;
 }
 
 .gif{
     text-indent: 2% ;
-    max-width: 60%;
+    max-width: 40%;
     height: auto;
     border-radius: 8px; 
     box-shadow: 3px 3px 15px 5px rgba(0, 0, 0, 0.75);
