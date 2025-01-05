@@ -90,7 +90,7 @@ body {
 
 .content{
     padding: 0 20px;
-    text-align: justify;
+    text-align: left;
 }
 
 .gif{
@@ -178,6 +178,14 @@ button:after{
     .row{
         flex-direction: column;
     }
+
+    .gif{
+        max-width: 100%;
+    }
+
+    .sideImage{
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width: 400px){
@@ -189,7 +197,7 @@ button:after{
 
 .footer{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 20px;
     background: #6d0d85;
     
@@ -201,7 +209,7 @@ button:after{
 
 .footerContent{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     
     text-align: left;
     color: white;
