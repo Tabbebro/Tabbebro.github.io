@@ -95,7 +95,16 @@ body {
 
 .gif{
     text-indent: 2% ;
-    max-width: 40%;
+    max-width: 750px;
+    height: auto;
+    border-radius: 8px; 
+    box-shadow: 3px 3px 15px 5px rgba(0, 0, 0, 0.75);
+    margin-left: 2%;
+}
+
+.gifsmall{
+    text-indent: 2% ;
+    max-width: 750px;
     height: auto;
     border-radius: 8px; 
     box-shadow: 3px 3px 15px 5px rgba(0, 0, 0, 0.75);
@@ -174,8 +183,15 @@ button:after{
 
 #more{display: none;}
 
-@media screen and (max-width: 400px){
-    .row{
+@media screen and (max-width: 600px){
+    .title{
+        flex: 100%;
+    }
+
+    .side{
+        flex: 100%
+    }
+    .wrapper{
         flex-direction: column;
     }
 
@@ -183,12 +199,14 @@ button:after{
         max-width: 100%;
     }
 
+    .gifsmall{
+        max-width: 100%
+    }
+
     .sideImage{
         max-width: 100%;
     }
-}
 
-@media screen and (max-width: 400px){
     .navbar a{
         float: none;
         width: 100%;
