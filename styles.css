@@ -1,267 +1,264 @@
+
+/* =============================
+    Base & Global Styles
+=============================== */
 html{
     height: 100%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #20221B;
+    color: #ffffff;
     margin: 0;
     position: relative;
     min-height: 100%;
-    box-sizing: inherit;
     padding-bottom: 6rem;
+    line-height: 1.7;
+    font-size: 18px;
 }
-
+/* =============================
+    Fonts
+=============================== */
 @font-face{
     font-family: customFont;
     src: url('Fonts/AGaramondPro-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
-
+/* =============================
+    Header
+=============================== */
 .header {
-    padding: 15px;
-    text-align: left;
-    background: #6d0d85;
+    padding: 20px;
+    background: linear-gradient(90deg, #6d0d85, #9e30c7);
     color: white;
+    text-align: left;
 }
 
 .header h1{
-    font-size: 40px;
+    font-size: 42px;
+    font-family: customFont, serif;
+    margin-bottom: 5px;
 }
 
-.imageHeader{
-    width: 15px;
-    height: 15px;
+.header p{
+    margin: 0;
+    font-size: 20px;
 }
 
+/* =============================
+NavBar
+=============================== */
 .navbar{
-    overflow: hidden;
-    background-color: #303030;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #cc00ff;
+    padding: 8px 0;
+    gap: 30px;
 }
 
 .navbar a{
-    float: left;
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     color: white;
-    text-align: center;
-    padding: 15px 20px;
     text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 10px 16px;
+    transition: all 0.3s ease;
 }
 
 .navbar a:hover{
-    filter:invert(100%);
-    background-color: #222222;
-}
-
-*{
-    box-sizing: border-box;
-}
-
-.imageTitle{
-    width: 22px;
-    height: 22px;
-    /* filter: drop-shadow(0px 100px 0 #af11d6);
-    transform: translateY(-100px); */
-}
-
-.row{
-    background-color: #303030; 
-    padding: 20px;
-    margin: 10px auto;
-    width: 95%;
-    border-radius: 20px;
-    overflow-y: auto;
-    color: white;
-}
-
-.row h1, .row h2{
     color: #cc00ff;
-    border-style: none none solid none;
+    transform: scale(1.05)
 }
 
-.row p{
-    margin-left: 2%;
+.imageNavBar{
+    width: 20px;
+    height: 20px;
 }
 
-.title{
-    padding: 0 20px;
-    flex: 70%;
-    text-align: left;
+/* =============================
+    Grid
+=============================== */
+
+.project-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px , 1fr));
+    gap: 20px;
+    width: 90%;
+    margin: 40px auto;
 }
 
-.title-info{
-    line-height: .3;
-}
-
-.content{
-    padding: 0 20px;
-    text-align: left;
-}
-
-.gif{
-    text-indent: 2% ;
-    max-width: 750px;
-    height: auto;
-    border-radius: 8px; 
-    box-shadow: 3px 3px 15px 5px rgba(0, 0, 0, 0.75);
-    margin-left: 2%;
-}
-
-.gifsmall{
-    text-indent: 2% ;
-    max-width: 750px;
-    height: auto;
-    border-radius: 8px; 
-    box-shadow: 3px 3px 15px 5px rgba(0, 0, 0, 0.75);
-    margin-left: 2%;
-}
-
-.side{
-    padding: 0 20px;
-    flex: 30%;
-    text-align: center;
-}
-
-.sideImage{
-    /* width: 315px; */
-    /* height: 250px; */
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.75);
-}
-
-.hide{
-    display: flex;
-    flex-wrap: wrap;
+.project-box{
+    background-color: #2a2a2a;
+    border-radius: 12px;
     overflow: hidden;
-    position: relative;
-    padding: 20px 0px;
-    height: 250px;
-}
-
-.wrapper{
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
     display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    padding: 20px 0px;
+    flex-direction: column;
+    text-align: cneter;
 }
 
-.show{
+.project-box:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(204, 0, 255, 0.5);
+}
+
+.project-box img{
+    width: 100%;
     height: auto;
+    display: block;
 }
 
-button{
-    position: absolute;
-    right: 0px;
-    left: 0px;
-    bottom: 0px;
-    border: none;
-    font-size: 20px;
-    font-weight: bold;
+.project-box h3{
+    margin: 10px 0;
     color: #cc00ff;
-    background-color: transparent;
-    padding: 1px 0px;
-    z-index: 1;
+    font-size: 1.2rem;
+}
+/* =============================
+    Pop Up / Modal
+=============================== */
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content{
+    background-color: #20221B;
+    margin: auto;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+}
+
+.modal-content img{
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.modal-content h2{
+    color: #cc00ff;
+    margin-top: 0;
+    border-bottom: 2px solid rgba(204, 0, 255, 0.4);
+    padding-bottom: 5px;
+}
+
+.modal-content p{
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.modal-content a{
+    color: #ffb7ff;
+    text-decoration: underline;
+}
+
+.close{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: white;
+    font-size: 28px;
     cursor: pointer;
 }
 
-button:after{
-    position: absolute;
-    content: "";
-    right: 0px;
-    left: 0px;
-    bottom: -20px;
-    height: 80px;
-    background: linear-gradient(180deg, #303030a1, #303030, #303030);
-    z-index: -1;
-}
-
-.show_button{
-    position: unset;
-    width: 100%;
-}
-
-.show_button:after{
-    background: transparent;
-}
-
-#more{display: none;}
-
-@media screen and (max-width: 600px){
-    .title{
-        flex: 100%;
-    }
-
-    .side{
-        flex: 100%
-    }
-    .wrapper{
-        flex-direction: column;
-    }
-
-    .gif{
-        max-width: 100%;
-    }
-
-    .gifsmall{
-        max-width: 100%
-    }
-
-    .sideImage{
-        max-width: 100%;
-    }
-
-    .navbar a{
-        float: none;
-        width: 100%;
-    }
-}
+/* =============================
+Footer
+=============================== */
 
 .footer{
     display: flex;
-    flex-wrap: nowrap;
-    padding: 20px;
-    background: #6d0d85;
-    
-    position: absolute;
-    bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(90deg, #6d0d85, #9e30c7);
+    padding: 20px 0;
+    position: relative;
     width: 100%;
-    height: 100px;
+    justify-content: center;
+    gap: 10px;
 }
 
 .footerContent{
     display: flex;
-    flex-wrap: nowrap;
-    
-    text-align: left;
-    color: white;
-    padding: 0 20px;
+    justify-content: center;
+    gap: 20px;
 }
 
 .footerContent a{
-    float: left;
     display: block;
     color: white;
-    text-align: center;
-    padding: 0px 5px;
     text-decoration: none;
 }
 
 .footerInfo{
-    padding-top: 5px;
     color: white;
+    font-size: 14px;
 }
 
 .imageFooter{
     width: 25px;
     height: 25px;
-    margin-right: 5px;
     vertical-align: middle;
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .imageFooter:hover{
     filter:invert(100%);
+    transform: scale(1.2);
 }
+
+
+/* =============================
+    Mobile Device Support
+=============================== */
+
+@media screen and (max-width: 900px){
+    body{
+        font-size: 16px;
+    }
+
+    .navbar{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .project-grid{
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 15px;
+        width: 95%;
+        margin: 30px auto;
+    }
+
+    .modal-content{
+        width: 95%;
+        padding: 15px;
+    }
+}
+
+/* =============================
+End
+=============================== */
