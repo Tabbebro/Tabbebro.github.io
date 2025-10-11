@@ -1,7 +1,7 @@
 const projects = [
     { // Time Thrall
         title: "Time Thrall",
-        image: "images/projects/TimeThrall.png",
+        image: "images/projects/TT_Thumb.png",
         engine: "Unity",
         platform: "PC",
         status: "Unreleased",
@@ -11,7 +11,7 @@ const projects = [
     // ==============================================
     { // Arena Shooter Supreme
         title: "Arena Shooter Supreme",
-        image: "images/projects/Ass.png",
+        image: "images/projects/Ass_Thumb.png",
         engine: "Unreal Engine 5",
         platform: "PC",
         status: "Unreleased",
@@ -21,7 +21,7 @@ const projects = [
     // ==============================================
     { // Sunescape
         title: "Sunescape",
-        image: "images/projects/Sunescape.png",
+        image: "images/projects/Sunescape_Thumb.png",
         engine: "Unity",
         platform: "PC",
         status: "Released",
@@ -31,7 +31,7 @@ const projects = [
     // ==============================================
     { // MehuSim
         title: "MehuSim (VR)",
-        image: "images/projects/MehuSim.png",
+        image: "images/projects/Mehu_Thumb.png",
         engine: "Unity",
         platform: "Virtual Reality",
         status: "Released",
@@ -41,7 +41,7 @@ const projects = [
     // ==============================================
     { // Moo Moo Madness
         title: "Moo Moo Madness",
-        image: "images/projects/MooMoo.png",
+        image: "images/projects/MooMoo_Thumb.png",
         engine: "Unity",
         platform: "Mobile",
         status: "Released",
@@ -51,7 +51,7 @@ const projects = [
     // ==============================================
     { // Entitled Roguelike Project (ERP) 
         title: "Entitled Roguelike Project (ERP)",
-        image: "images/projects/Erp.png",
+        image: "images/projects/Erp_Thumb.png",
         engine: "Unity",
         platform: "PC",
         status: "Released",
@@ -61,7 +61,7 @@ const projects = [
     // ==============================================
     { // Shank Simulator
         title: "Shank Simulator",
-        image: "images/projects/Shank.png",
+        image: "images/projects/Shank_Thumb.png",
         engine: "Unity",
         platform: "PC",
         status: "Released",
