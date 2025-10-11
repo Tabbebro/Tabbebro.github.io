@@ -26,7 +26,7 @@ function openModal(index){
     modalInfo.textContent = `Engine: ${project.engine} | Platform: ${project.platform} | Status: ${project.status}`;
     modalDescription.textContent = project.description;
     modalExtra.innerHTML = project.extra;
-    modal.style.display = "block";
+    modal.style.display = "flex";
 }
 
 // Close Modal

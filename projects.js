@@ -68,6 +68,7 @@ const projects = [
         description: "Write New Description Here",
         extra: "Write Extras Here"
     },
+    
     // ==============================================
     { // Empty
         title: "",
