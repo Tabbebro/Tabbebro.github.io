@@ -106,7 +106,7 @@ NavBar
     transition: transform 0.2s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
-    text-align: cneter;
+    text-align: center;
 }
 
 .project-box:hover{
@@ -159,12 +159,6 @@ NavBar
     margin-bottom: 20px;
 }
 
-.modal-content h2{
-    color: #cc00ff;
-    margin-top: 0;
-    border-bottom: 2px solid rgba(204, 0, 255, 0.4);
-    padding-bottom: 5px;
-}
 
 .modal-content p{
     line-height: 1.6;
@@ -184,8 +178,7 @@ NavBar
 }
 
 .modal-body img{
-    max-width: 400px;
-    width: 40%;
+    max-width: 40%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -193,6 +186,63 @@ NavBar
 
 .modal-text{
     width: 60%;
+}
+
+.modal-text h2{
+    color: #cc00ff;
+    border-bottom: 2px solid rgba(204, 0, 255, 0.4);
+    margin-bottom: 5px;
+}
+
+.info-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+#modalInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.95rem;
+    color: #ddd;
+    flex: 1;
+}
+
+.info-line{
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.info-line img{
+    max-width: 20px;
+    max-height: 20px;
+    margin: 0px;
+}
+
+.modal-link{
+    background: linear-gradient(90deg, #6d0d85, #9e30c7);
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.3s;
+    white-space: nowrap;
+    align-self: flex-start;
+    margin-top: 0;
+}
+
+.modal-link:hover{
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #9e30c7, #cc00ff)
 }
 
 .close{
@@ -280,6 +330,15 @@ Footer
 
     .modal-body img, .modal-text{
         width: 100%
+    }
+
+    .info-row{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal-link{
+        align-self: flex-start;
     }
 }
 
