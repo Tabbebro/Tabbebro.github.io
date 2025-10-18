@@ -24,17 +24,21 @@
             <!-- Project Boxes Here With JS -->
          </div>
 
-        <!-- Pop Up / Modal -->
+         <!-- Pop Up / Modal -->
         <div id="projectModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <div class="modal-body"> 
                     <div class="modal-media">
-                        <!-- Image - visible by default -->
-                        <img id="modalImage" src="" alt="" style="display: block;">
-                        <!-- YouTube Embed -->
+                        <!-- Video Container Only -->
                         <div id="modalVideoContainer" style="display: none;">
-                            <iframe id="modalVideo" width="100%" height="315" frameborder="0" allowfullscreen> </iframe>
+                            <iframe id="modalVideo" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        
+                        <!-- Gallery below the video -->
+                        <div id="modalGallery" class="modal-gallery" style="display: none;">
+                            <h3>More Media</h3>
+                            <div class="gallery-list" id="galleryGrid"></div>
                         </div>
                     </div>
                     <div class="modal-text">
@@ -65,7 +69,6 @@
 
         <script src="projects.js"></script>
         <script src="game.js"></script>
-
     
     </body>
 </html>

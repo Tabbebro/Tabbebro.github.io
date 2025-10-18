@@ -1,20 +1,28 @@
 // References
 const grid = document.getElementById("projectGrid");
 const modal = document.getElementById("projectModal");
-
 const modalVideoContainer = document.getElementById("modalVideoContainer");
 const modalVideo = document.getElementById("modalVideo");
-const modalImage = document.getElementById("modalImage");
-
 const modalTitle = document.getElementById("modalTitle");
-
 const modalInfo = document.getElementById("modalInfo");
 const modalLink = document.getElementById("modalLink");
-
 const modalDescription = document.getElementById("modalDescription");
 const modalExtra = document.getElementById("modalExtra");
-
+const modalGallery = document.getElementById("modalGallery");
+const galleryGrid = document.getElementById("galleryGrid");
 const closeBtn = document.querySelector(".close");
+
+// Create lightbox element
+const lightbox = document.createElement("div");
+lightbox.className = "gallery-lightbox";
+lightbox.innerHTML = `
+    <span class="gallery-lightbox-close">&times;</span>
+    <img src="" alt="">
+`;
+document.body.appendChild(lightbox);
+
+const lightboxImg = lightbox.querySelector("img");
+const lightboxClose = lightbox.querySelector(".gallery-lightbox-close");
 
 // Generate Project Boxes
 projects.forEach((project, index) =>{
@@ -28,27 +36,50 @@ projects.forEach((project, index) =>{
 // Open Modal
 function openModal(index){
     const project = projects[index];
+    
     // TITLE
     modalTitle.textContent = project.title;
 
-    modalImage.style.display = "none";
-
-    // VIDEO / IMAGE
-    if (project.video && project.video.trim() !== "") { // Show Video
-        console.log("Video available, checking if youtube.");
-        if (isYoutubeUrl(project.video)) { // Show Youtube Video
-            modalVideoContainer.style.display = "block";
-
+    // VIDEO - Only show if available
+    if (project.video && project.video.trim() !== "") {
+        modalVideoContainer.style.display = "block";
+        
+        if (isYoutubeUrl(project.video)) {
             const embedUrl = GetYoutubeEmbedUrl(project.video);
             modalVideo.src = embedUrl;
-        } else{ // Show Local Video
-            modalVideoContainer.style.display = "block";
-            
-            handleLocalVideo(project.video, project.image);
+        } else {
+            // Handle local videos if needed
+            modalVideo.src = project.video;
         }
-    }
-    else{
+    } else {
         modalVideoContainer.style.display = "none";
+    }
+    
+    // GALLERY
+    if (project.gallery && project.gallery.length > 0) {
+        modalGallery.style.display = "block";
+        galleryGrid.innerHTML = "";
+        
+        project.gallery.forEach((imageSrc, imageIndex) => {
+            const galleryItem = document.createElement("div");
+            galleryItem.className = "gallery-item";
+            galleryItem.innerHTML = `<img src="${imageSrc}" alt="Gallery image ${imageIndex + 1}">`;
+            
+            galleryItem.addEventListener("click", () => {
+                lightboxImg.src = imageSrc;
+                lightbox.style.display = "flex";
+                
+                // Optional active state
+                document.querySelectorAll('.gallery-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                galleryItem.classList.add('active');
+            });
+            
+            galleryGrid.appendChild(galleryItem);
+        });
+    } else {
+        modalGallery.style.display = "none";
     }
     
     // INFO
@@ -57,11 +88,9 @@ function openModal(index){
         <span><strong>Engine:</strong> ${project.engine}</span>
         ${project.engineIcon ? `<img src="${project.engineIcon}" alt="${project.engine}">` : ""}
     </div>
-
     <div class="info-line">
         <span><strong>Platform:</strong> ${project.platform}</span>
     </div>
-        
     <div class="info-line">
         <span><strong>Status:</strong> ${project.status}</span>
         ${project.storeIcon ? `<img src="${project.storeIcon}" alt="${project.status}">` : ""}
@@ -104,7 +133,6 @@ function isYoutubeUrl(url){
 
 // Converts Youtube Link To Embed Video
 function GetYoutubeEmbedUrl(url){
-    console.log("converting url to embed:", url);
     if (url.includes('embed')) {
         return url;
     }
@@ -125,16 +153,24 @@ function GetYoutubeEmbedUrl(url){
         }
     }
 
-    console.log("extracted video ID:", videoId);
     return `https://www.youtube.com/embed/${videoId}?rel=0`;
 }
 
-function handleLocalVideo(videoUrl, posterImage) {
-    modalVideo.src = videoUrl;
-}
-
 function stopVideo(){
-    if (modalVideo.src.includes('youtube.com')) {
+    if (modalVideo.src && modalVideo.src.includes('youtube.com')) {
+        const currentSrc = modalVideo.src;
         modalVideo.src = '';
+        modalVideo.src = currentSrc;
     }
 }
+
+// Lightbox functionality
+lightboxClose.onclick = () => {
+    lightbox.style.display = "none";
+};
+
+lightbox.onclick = (e) => {
+    if (e.target === lightbox) {
+        lightbox.style.display = "none";
+    }
+};
