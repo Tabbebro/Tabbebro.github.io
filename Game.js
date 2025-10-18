@@ -117,12 +117,14 @@ function openModal(index){
 closeBtn.onclick = () => {
     modal.style.display = "none";
     stopVideo();
+    clearGalleryActiveState();
 }
 
 window.onclick = (e) => { 
     if(e.target === modal) {
         modal.style.display = "none";
         stopVideo();
+        clearGalleryActiveState();
     }
 }
 
@@ -167,10 +169,18 @@ function stopVideo(){
 // Lightbox functionality
 lightboxClose.onclick = () => {
     lightbox.style.display = "none";
+    clearGalleryActiveState();
 };
 
 lightbox.onclick = (e) => {
-    if (e.target === lightbox) {
+    if (e.target === lightbox || e.target === lightboxImg) {
         lightbox.style.display = "none";
+        clearGalleryActiveState();
     }
 };
+
+function clearGalleryActiveState(){
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.classList.remove('active');
+    });
+}

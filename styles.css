@@ -159,7 +159,7 @@ Grid
     background-color: #2a2a2a;
     padding: 20px;
     border-radius: 12px;
-    max-width: 900px;
+    max-width: 1100px;
     width: 100%;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
 }
@@ -177,15 +177,15 @@ Grid
 .modal-body{
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 30px;
     align-items: flex-start;
 }
 /* #endregion */
 
 /* #region Modal Media */
 .modal-media {
-    max-width: 40%;
-    flex: 0 0 40%;
+    max-width: 50%;
+    flex: 0 0 50%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -282,7 +282,7 @@ Grid
 
 /* #region Modal Text */
 .modal-text{
-    width: 60%;
+    width: 50%;
 }
 
 .modal-text h2{
@@ -343,6 +343,7 @@ Grid
 }
 /* #endregion */
 
+/*#region Close Button*/
 .close{
     position: absolute;
     top: 15px;
@@ -351,6 +352,7 @@ Grid
     font-size: 28px;
     cursor: pointer;
 }
+/*#endregion*/
 
 /* #region Modal Gallery Lightbox */
 .gallery-lightbox {
@@ -371,6 +373,7 @@ Grid
     max-height: 90%;
     border-radius: 8px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
 }
 
 .gallery-lightbox-close {
@@ -451,10 +454,12 @@ Mobile Device Support
     .modal-content{
         width: 95%;
         padding: 15px;
+        max-width: 95%;
     }
     
     .modal-body{
         flex-direction: column;
+        gap: 20px;
     }
     
     .modal-media {
@@ -466,16 +471,20 @@ Mobile Device Support
     .modal-text{
         width: 100%;
     }
+
+    #modalVideoContainer{
+        padding-bottom: 56.25%;
+    }
     
     .gallery-list {
-        max-height: 300px;
+        max-height: 350px;
         flex-direction: row;
         overflow-x: auto;
         overflow-y: hidden;
         padding-bottom: 5px;
     }
     .gallery-item {
-        min-width: 150px;
+        min-width: 160px;
         flex-shrink: 0;
     }
     .gallery-item:hover {
@@ -483,7 +492,7 @@ Mobile Device Support
     }
     
     .gallery-item img {
-        max-height: 100px;
+        max-height: 120px;
     }
     
     .info-row{

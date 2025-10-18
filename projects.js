@@ -56,7 +56,6 @@ const projects = [
         image: "images/projects/Mehu/Mehu_Thumb.png",
         video: "",
         gallery: [
-            "images/projects/Mehu/MehuSim.png",
             "images/projects/Mehu/Mehu_Gun.gif",
             "images/projects/Mehu/Mehu_Radio.png",
             "images/projects/Mehu/Mehu_TV.gif",
