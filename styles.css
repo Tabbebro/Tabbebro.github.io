@@ -1,6 +1,20 @@
 /* =============================
     Base & Global Styles
 =============================== */
+/* #region Color Palette*/
+:root{
+    --gunmetal: #1a1a2e;
+    --black: #0f0f1a;
+    --indigo-dye: #4b0082;
+    --raising-black: #2b2b42;
+    --prussian-blue: #2a1b3d;
+    --indigo-accent: #6a0dad;
+    --indigo-light: #9370db;
+    --indigo-glow: rgba(147, 112, 219, 0.4);
+    --electric-purple: #8a2be2;
+}
+/* #endregion */
+
 /* #region Base Stuff */
 html{
     height: 100%;
@@ -20,6 +34,23 @@ body {
     min-height: 100%;
     line-height: 1.7;
     font-size: 18px;
+}
+
+.body-bg-image{
+    background-image: 
+        linear-gradient(135deg,
+            rgba(75, 0, 130, 0.15) 0%,
+            rgba(106, 13, 173, 0.1) 100%),
+        url('images/BG_hires.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.body-loading{
+    background: #20221B;
 }
 /* #endregion */
 
@@ -41,9 +72,20 @@ body {
 /* #region Header */
 .header {
     padding: 20px;
-    background: linear-gradient(90deg, #6d0d85, #9e30c7);
+    background: linear-gradient(135deg, var(--indigo-dye) 0%, var(--electric-purple) 100%);
     color: white;
     text-align: left;
+}
+
+.header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(147, 112, 219, 0.3) 50%, transparent 70%);
+    animation: shine 3s infinite;
 }
 
 .header h1{
@@ -63,13 +105,18 @@ NavBar
 =============================== */
 /* #region NavBar */
 .navbar{
-    background-color: #1a1a1a;
+    background-color: rgba(26, 26, 46, 0.95);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    border-bottom: 2px solid #cc00ff;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(90deg, var(--indigo-light), var(--electric-purple)) 1;
     padding: 8px 0;
     gap: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .navbar a{
@@ -80,13 +127,17 @@ NavBar
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 0.5px;
-    padding: 10px 16px;
+    padding: 12px 20px;
     transition: all 0.3s ease;
+    border-radius: 25px;
+    background: rgba(75, 0, 130, 0.3);
 }
 
 .navbar a:hover{
-    color: #cc00ff;
-    transform: scale(1.05)
+    color: var(--indigo-light);
+    transform: translateY(-2px);
+    background: rgba(147, 112, 219, 0.4);
+    box-shadow: 0 5px 15px var(--indig);
 }
 
 .imageNavBar{
@@ -108,19 +159,22 @@ Grid
 }
 
 .project-box{
-    background-color: #2a2a2a;
+    background: linear-gradient(135deg, var(--raising-black) 0%, var(--prussian-blue) 100%);
     border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.3s;
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     text-align: center;
+    border: 1px solid rgba(75, 0, 130, 0.4);
+    backdrop-filter: blur(5px);
 }
 
 .project-box:hover{
-    transform: scale(1.03);
-    box-shadow: 0 0 20px rgba(204, 0, 255, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px var(--indigo-glow);
+    border-color: var(--indigo-light);
 }
 
 .project-box img{
@@ -131,7 +185,7 @@ Grid
 
 .project-box h3{
     margin: 10px 0;
-    color: #cc00ff;
+    color: var(--indigo-light);
     font-size: 1.2rem;
 }
 /* #endregion */
@@ -156,12 +210,14 @@ Grid
 }
 
 .modal-content{
-    background-color: #2a2a2a;
+    background: linear-gradient(135deg, var(--gunmetal) 0%, var(--prussian-blue) 100%);
     padding: 20px;
     border-radius: 12px;
     max-width: 1100px;
     width: 100%;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 30px rgba(75, 0, 130, 0.6);
+    border: 1px solid rgba(147, 112, 219, 0.3);
+    backdrop-filter: blur(10px);
 }
 
 .modal-content p{
@@ -264,14 +320,14 @@ Grid
 
 .gallery-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 12px rgba(204, 0, 255, 0.3);
-    border-color: #cc00ff;
+    box-shadow: 0 0 15px var(--indigo-glow);
+    border-color: var(--indigo-light);
     z-index: 2;
 }
 
 .gallery-item.active {
-    border-color: #cc00ff;
-    box-shadow: 0 0 15px rgba(204, 0, 255, 0.5);
+    border-color: var(--electric-purple);
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.6);
 }
 
 .gallery-item img {
@@ -289,8 +345,8 @@ Grid
 }
 
 .modal-text h2{
-    color: #cc00ff;
-    border-bottom: 2px solid rgba(204, 0, 255, 0.4);
+    color: var(--indigo-light);
+    border-bottom: 2px solid rgba(147, 112, 219, 0.5);
     margin-bottom: 5px;
 }
 
@@ -327,22 +383,24 @@ Grid
 }
 
 .modal-link{
-    background: linear-gradient(90deg, #6d0d85, #9e30c7);
+    background: linear-gradient(135deg, var(--indigo-dye) 0%, var(--electric-purple) 100%);
     color: white;
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 8px;
     font-size: 0.9rem;
     font-weight: bold;
-    transition: transform 0.2s, background 0.3s;
+    transition: all 0.3s ease;
     white-space: nowrap;
     align-self: flex-start;
     margin-top: 0;
+    border: 1px solid rgba(147, 112, 219, 0.4);
 }
 
 .modal-link:hover{
     transform: scale(1.05);
-    background: linear-gradient(90deg, #9e30c7, #cc00ff)
+    background: linear-gradient(135deg, var(--electric-purple) 0%, var(--indigo-light) 100%);
+    box-shadow: 0 5px 15px var(--indigo-glow);
 }
 /* #endregion */
 
@@ -398,7 +456,7 @@ Footer
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: linear-gradient(90deg, #6d0d85, #9e30c7);
+    background: linear-gradient(135deg, var(--indigo-dye) 0%, var(--electric-purple) 100%);
     padding: 20px 0;
     gap: 10px;
 }
