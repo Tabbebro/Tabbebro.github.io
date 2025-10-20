@@ -3,15 +3,11 @@
 =============================== */
 /* #region Color Palette*/
 :root{
-    --gunmetal: #1a1a2e;
-    --black: #0f0f1a;
-    --indigo-dye: #4b0082;
-    --raising-black: #2b2b42;
-    --prussian-blue: #2a1b3d;
-    --indigo-accent: #6a0dad;
-    --indigo-light: #9370db;
-    --indigo-glow: rgba(147, 112, 219, 0.4);
-    --electric-purple: #8a2be2;
+    --dark-bg: #1a1a2e;
+    --darker-bg: #0f0f1a;
+    --accent-purple: #6a0dad;
+    --light-purple: #9370db;
+    --subtle-glow: rgba(147, 112, 219, 0.2);
 }
 /* #endregion */
 
@@ -26,7 +22,7 @@ html{
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #20221B;
     color: #ffffff;
     margin: 0;
@@ -38,15 +34,12 @@ body {
 
 .body-bg-image{
     background-image: 
-        linear-gradient(135deg,
-            rgba(75, 0, 130, 0.15) 0%,
-            rgba(106, 13, 173, 0.1) 100%),
+        linear-gradient(135deg, rgba(26, 26, 46, 0.6), rgba(26, 26, 46, 0.7)), 
         url('images/BG_hires.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    transition: background-image 0.5s ease-in-out;
 }
 
 .body-loading{
@@ -72,20 +65,10 @@ body {
 /* #region Header */
 .header {
     padding: 20px;
-    background: linear-gradient(135deg, var(--indigo-dye) 0%, var(--electric-purple) 100%);
+    background: var(--dark-bg);
     color: white;
     text-align: left;
-}
-
-.header::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, transparent 30%, rgba(147, 112, 219, 0.3) 50%, transparent 70%);
-    animation: shine 3s infinite;
+    border-bottom: 3px solid var(--accent-purple);
 }
 
 .header h1{
@@ -105,18 +88,13 @@ NavBar
 =============================== */
 /* #region NavBar */
 .navbar{
-    background-color: rgba(26, 26, 46, 0.95);
-    backdrop-filter: blur(10px);
+    background-color: var(--darker-bg);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    border-bottom: 2px solid;
-    border-image: linear-gradient(90deg, var(--indigo-light), var(--electric-purple)) 1;
+    border-bottom: 1px solid #333;
     padding: 8px 0;
     gap: 30px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
 .navbar a{
@@ -126,18 +104,14 @@ NavBar
     color: white;
     text-decoration: none;
     font-weight: 600;
-    letter-spacing: 0.5px;
-    padding: 12px 20px;
+    padding: 10px 16px;
     transition: all 0.3s ease;
-    border-radius: 25px;
-    background: rgba(75, 0, 130, 0.3);
+    border-radius: 4px;
 }
 
 .navbar a:hover{
-    color: var(--indigo-light);
-    transform: translateY(-2px);
-    background: rgba(147, 112, 219, 0.4);
-    box-shadow: 0 5px 15px var(--indig);
+    color: var(--light-purple);
+    background: rgba(147, 112, 219, 0.1);
 }
 
 .imageNavBar{
@@ -159,22 +133,20 @@ Grid
 }
 
 .project-box{
-    background: linear-gradient(135deg, var(--raising-black) 0%, var(--prussian-blue) 100%);
-    border-radius: 12px;
+    background: var(--dark-bg);
+    border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     text-align: center;
-    border: 1px solid rgba(75, 0, 130, 0.4);
-    backdrop-filter: blur(5px);
+    border: 1px solid #333;
 }
 
 .project-box:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 0 10px var(--indigo-glow);
-    border-color: var(--indigo-light);
+    transform: translateY(-2px);
+    border-color: var(--accent-purple);
 }
 
 .project-box img{
@@ -185,7 +157,7 @@ Grid
 
 .project-box h3{
     margin: 10px 0;
-    color: var(--indigo-light);
+    color: var(--light-purple);
     font-size: 1.2rem;
 }
 /* #endregion */
@@ -210,14 +182,13 @@ Grid
 }
 
 .modal-content{
-    background: linear-gradient(135deg, var(--gunmetal) 0%, var(--prussian-blue) 100%);
+    background: var(--dark-bg);
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 8px;
     max-width: 1100px;
     width: 100%;
-    box-shadow: 0 0 30px rgba(75, 0, 130, 0.6);
-    border: 1px solid rgba(147, 112, 219, 0.3);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid #444;
 }
 
 .modal-content p{
@@ -273,10 +244,10 @@ Grid
 }
 
 .modal-gallery h3 {
-    color: #cc00ff;
+    color: var(--light-purple);
     margin-bottom: 12px;
     font-size: 1.2rem;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid rgba(147, 112, 219, 0.3);
     padding-bottom: 8px;
 }
 
@@ -299,12 +270,12 @@ Grid
 }
 
 .gallery-list::-webkit-scrollbar-thumb {
-    background: #6d0d85;
+    background: var(--indigo-accent);
     border-radius: 3px;
 }
 
 .gallery-list::-webkit-scrollbar-thumb:hover {
-    background: #9e30c7;
+    background: var(--indigo-light);
 }
 
 .gallery-item {
@@ -319,15 +290,13 @@ Grid
 }
 
 .gallery-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px var(--indigo-glow);
-    border-color: var(--indigo-light);
+    transform: scale(1.02);
+    border-color: var(--accent-purple);
     z-index: 2;
 }
 
 .gallery-item.active {
-    border-color: var(--electric-purple);
-    box-shadow: 0 0 20px rgba(138, 43, 226, 0.6);
+    border-color: var(--accent-purple);
 }
 
 .gallery-item img {
@@ -345,9 +314,10 @@ Grid
 }
 
 .modal-text h2{
-    color: var(--indigo-light);
-    border-bottom: 2px solid rgba(147, 112, 219, 0.5);
+    color: var(--light-purple);
+    border-bottom: 2px solid #444;
     margin-bottom: 5px;
+    padding-bottom: 5px;
 }
 
 .info-row{
@@ -383,24 +353,22 @@ Grid
 }
 
 .modal-link{
-    background: linear-gradient(135deg, var(--indigo-dye) 0%, var(--electric-purple) 100%);
+    background: var(--accent-purple);
     color: white;
     text-decoration: none;
     padding: 8px 16px;
-    border-radius: 8px;
+    border-radius: 4px;
     font-size: 0.9rem;
     font-weight: bold;
     transition: all 0.3s ease;
     white-space: nowrap;
     align-self: flex-start;
     margin-top: 0;
-    border: 1px solid rgba(147, 112, 219, 0.4);
 }
 
 .modal-link:hover{
-    transform: scale(1.05);
-    background: linear-gradient(135deg, var(--electric-purple) 0%, var(--indigo-light) 100%);
-    box-shadow: 0 5px 15px var(--indigo-glow);
+    transform: scale(1.02);
+    background: var(--light-purple);
 }
 /* #endregion */
 
@@ -456,38 +424,46 @@ Footer
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: linear-gradient(135deg, var(--indigo-dye) 0%, var(--electric-purple) 100%);
+    background: var(--dark-bg);
     padding: 20px 0;
     gap: 10px;
 }
 
-.footerContent{
+.footer-content{
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-.footerContent a{
+.footer-content a{
     display: block;
     color: white;
     text-decoration: none;
 }
 
-.footerInfo{
+.footer-info{
     color: white;
     font-size: 14px;
 }
 
-.imageFooter{
+.footer-image{
     width: 25px;
     height: 25px;
     vertical-align: middle;
+    fill: white;
+    stroke: white;
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-.imageFooter:hover{
-    filter:invert(100%);
+.footer-image:hover{
+    fill: var(--light-purple);
+    stroke: var(--light-purple);
     transform: scale(1.2);
+}
+
+.footer-image:hover g{
+    fill: var(--light-purple);
+    stroke: var(--light-purple);
 }
 /* #endregion */
 
