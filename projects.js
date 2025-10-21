@@ -10,7 +10,17 @@ const projects = [
         platform: "PC",
         status: "Released",
         storeIcon: "images/icons/steam.svg",
-        description: "Write New Description Here",
+        description: {
+            overview: "Project I helped with while dealing with personal issues",
+            role: "UI Programmer",
+            contributions:[
+                "Menu systems"
+            ],
+            learnings: [
+                "What it takes to put a game into Steam",
+                "What happens to a game when you do not market you big project"
+            ]
+        },
         link: "https://store.steampowered.com/app/3565320/Shattered_Bride/",
         isGameJam: false
     },
@@ -28,7 +38,19 @@ const projects = [
         platform: "PC",
         status: "Unreleased",
         storeIcon: "images/icons/no.svg",
-        description: "Write New Description Here",
+        description: {
+            overview: "Project I worked on during my internship at Need More Bullets",
+            role: "UI Programmer",
+            contributions:[
+                "Comprehensive menu system",
+                "Level selection UI",
+                "Simple shaders"
+            ],
+            learnings: [
+                "Key rebinding in Unity",
+                "How it feels to abandon a project and never see it to publish"
+            ]
+        },
         link: "",
         isGameJam: false
     }, 
@@ -43,7 +65,19 @@ const projects = [
         platform: "PC",
         status: "Unreleased",
         storeIcon: "images/icons/no.svg",
-        description: "Write New Description Here",
+        description: {
+            overview: "First Unreal Engine project",
+            role: "UI Programmer",
+            contributions:[
+                "Menus",
+                "HUD",
+                "Custom key rebind (because Unreals didn't work as I wanted it to)",
+            ],
+            learnings: [
+                "Unreal Engine's Widget system for UI",
+                "How to rebind keys in Unreal Engine"
+            ]
+        },
         link: "",
         isGameJam: false
     },
@@ -60,9 +94,21 @@ const projects = [
         engine: "Unity",
         engineIcon: "images/icons/unity.svg",
         platform: "PC",
-        status: "Released (Itch.Io)",
+        status: "Released (Itch.io)",
         storeIcon: "images/icons/itch.svg",
-        description: "Write New Description Here",
+                description: {
+            overview: "Summer course project that we entered Assembly Summer 2023 GameDev competition with",
+            role: "UI Programmer",
+            contributions:[
+                "Mission selection screen",
+                "Inventory system",
+                "Player HUD"
+            ],
+            learnings: [
+                "How to make a modular inventory from a basic tutorial",
+                "How to make HUD work in tandem with inventory"
+            ]
+        },
         link: "https://rockatana.itch.io/sunescape",
         isGameJam: false
     },
@@ -79,9 +125,23 @@ const projects = [
         engine: "Unity",
         engineIcon: "images/icons/unity.svg",
         platform: "Virtual Reality",
-        status: "Released (Itch.Io)",
+        status: "Released (Itch.io)",
         storeIcon: "images/icons/itch.svg",
-        description: "Write New Description Here",
+                description: {
+            overview: "First VR Project for a course where we had to learn a new tech",
+            role: "Side Content Programmer",
+            contributions:[
+                "Interactive television & radio",
+                "Functional \"Buff™\" toy gun",
+                "A rat that navigates around the player's apartment",
+                "A growing plant that bears fruit to be used in the making of \"mehu\" (juice)"
+            ],
+            learnings: [
+                "VR development",
+                "Building & optimizing for VR",
+                "How to use render textures"
+            ]
+        },
         link: "https://kuuttisnu.itch.io/mehusim",
         isGameJam: false
     },
@@ -94,9 +154,23 @@ const projects = [
         engine: "Unity",
         engineIcon: "images/icons/unity.svg",
         platform: "Mobile",
-        status: "Released (Playstore)",
+        status: "Released (Play Store)",
         storeIcon: "images/icons/playstore.svg",
-        description: "Write New Description Here",
+                description: {
+            overview: "First mobile project",
+            role: "UI Programmer",
+            contributions:[
+                "In-game store",
+                "Settings menu",
+                "Cow skin implementation"
+            ],
+            learnings: [
+                "Limitations of mobile games",
+                "How to save values to playerprefs",
+                "Making of a basic store for a game",
+                "Hastle of putting and keeping a game in Play Store"
+            ]
+        },
         link: "https://play.google.com/store/apps/details?id=com.KulkuriGames.MooMooMadness&hl=en_US",
         isGameJam: false
     },
@@ -113,9 +187,23 @@ const projects = [
         engine: "Unity",
         engineIcon: "images/icons/unity.svg",
         platform: "PC",
-        status: "Released (Itch.Io)",
+        status: "Released (Itch.io)",
         storeIcon: "images/icons/itch.svg",
-        description: "Write New Description Here",
+                description: {
+            overview: "First long game project (3 months)",
+            role: "UI & Gameplay Programmer",
+            contributions:[
+                "UI",
+                "Modified already made weapon system to make different weapons",
+                "Enemies from scratch"
+            ],
+            learnings: [
+                "Gameplay systems other than UI",
+                "Basics of saving values",
+                "Usage of Interfaces",
+                "What is A*, but didn't get to implement"
+            ]
+        },
         link: "https://hunts.itch.io/erp",
         isGameJam: false
     },
@@ -128,9 +216,20 @@ const projects = [
         engine: "Unity",
         engineIcon: "images/icons/unity.svg",
         platform: "PC",
-        status: "Released (Itch.Io)",
+        status: "Released (Itch.io)",
         storeIcon: "images/icons/itch.svg",
-        description: "Write New Description Here",
+        description: {
+            overview: "The first game project",
+            role: "UI Programmer",
+            contributions:[
+                "UI",
+                "Majority of menu art"
+            ],
+            learnings: [
+                "Basics of Unity",
+                "Basics of canvas based UI"
+            ]
+        },
         link: "https://hunts.itch.io/shank-simulator",
         isGameJam: false
     },
@@ -146,7 +245,16 @@ const projects = [
         platform: "",
         status: "",
         storeIcon: "",
-        description: "Write New Description Here",
+                description: {
+            overview: "",
+            role: "",
+            contributions:[
+                "",
+            ],
+            learnings: [
+                "",
+            ]
+        },
         link: "",
         isGameJam: false
     }

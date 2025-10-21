@@ -22,17 +22,17 @@ document.body.appendChild(lightbox);
 const lightboxImg = lightbox.querySelector("img");
 const lightboxClose = lightbox.querySelector(".gallery-lightbox-close");
 
-// Combine both project arrays
+
 const allProjects = [...projects, ...jamProjects];
 
-// Generate Project Boxes - Separated by type
+
 allProjects.forEach((project, index) => {
     const box = document.createElement("div");
     box.className = "project-box";
     box.innerHTML = `<img src="${project.image}" alt="${project.title}"><h3>${project.title}</h3>`;
     box.addEventListener("click", () => openModal(index));
     
-    // Determine which grid to add to based on project type
+    
     if (project.isGameJam) {
         document.getElementById("jamGrid").appendChild(box);
     } else {
@@ -40,7 +40,7 @@ allProjects.forEach((project, index) => {
     }
 });
 
-// Open Modal
+
 function openModal(index){
     const project = allProjects[index];
     
@@ -105,8 +105,24 @@ function openModal(index){
     `;
 
     // DESCRIPTION
-    modalDescription.textContent = project.description;
+    if (typeof project.description === 'object') {
+        modalDescription.innerHTML = `
+            <p><strong>Overview:</strong> ${project.description.overview}</p>
+            <p><strong>Role:</strong> ${project.description.role}</p>
+            <div class="contributions">
+                <strong>Contributions:</strong>
+                <ul>${project.description.contributions.map(item => `<li>${item}`).join('')}</ul>
+            </div>
+            <div>
+                <strong>Key Learnings:</strong>
+                <ul>${project.description.learnings.map(item => `<li>${item}`).join('')}</ul>
+            </div>
+        `;
+    } else{
+        modalDescription.textContent = project.description;
+    }
     
+    // LINK
     if (project.link && project.link.trim() !== "") {
         modalLink.href = project.link;
         modalLink.style.display = "inline-block";
@@ -118,7 +134,6 @@ function openModal(index){
     modal.style.display = "flex";
 }
 
-// Close Modal
 closeBtn.onclick = () => {
     modal.style.display = "none";
     stopVideo();
@@ -133,12 +148,10 @@ window.onclick = (e) => {
     }
 }
 
-// Checks If Link Is Youtube Link
 function isYoutubeUrl(url){
     return url.includes('youtube.com') || url.includes('youtu.be');
 }
 
-// Converts Youtube Link To Embed Video
 function GetYoutubeEmbedUrl(url){
     if (url.includes('embed')) {
         return url;
@@ -171,14 +184,12 @@ function stopVideo(){
     }
 }
 
-// Function to clear active gallery items
 function clearGalleryActiveState() {
     document.querySelectorAll('.gallery-item').forEach(item => {
         item.classList.remove('active');
     });
 }
 
-// Lightbox functionality
 lightboxClose.onclick = () => {
     lightbox.style.display = "none";
     clearGalleryActiveState();

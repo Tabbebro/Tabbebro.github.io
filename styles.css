@@ -132,6 +132,63 @@ NavBar
 /* #endregion */
 
 /* =============================
+Homepage Styles
+=============================== */
+/* #region Homepage*/
+
+.home-content{
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.intro-section{
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    background: var(--dark-bg);
+    border-radius: 12px;
+    padding: 40px;
+    border: 1px solid #333;
+    backdrop-filter: blur(5px);
+}
+
+.intro-text{
+    flex: 1;
+}
+
+.intro-text h1{
+    color: var(--light-purple);
+    font-family: customFont, serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--light-purple);
+    padding-bottom: 10px;
+}
+
+.intro-text p{
+    line-height: 1.8;
+    color: #ddd;
+    font-size: 1.1rem;
+}
+
+.profile-side{
+    flex: 0 0 300px;
+    text-align: center;
+}
+
+.profile-image{
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid var(--light-purple);
+    box-shadow: 0 8px 25px var(--subtle-glow);
+}
+
+/*#endregion */
+
+/* =============================
 Grid
 =============================== */
 /* #region Grid */
@@ -177,14 +234,14 @@ Grid
 }
 
 .projects-section{
-    margin-bottom: 60px;
+    margin-bottom: 0px;
 }
 
 .section-title{
     color: var(--light-purple);
     font-family: customFont, serif;
     font-size: 2rem;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     text-align: center;
     padding-bottom: 10px;
     position: relative;
@@ -469,6 +526,79 @@ Grid
 /* #endregion */
 
 /* =============================
+Links Page
+=============================== */
+/* #region Homepage*/
+
+.links-content{
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.links-section{
+    background: var(--dark-bg);
+    border-radius: 12px;
+    padding: 40px;
+    border: 1px solid #333;
+    backdrop-filter: blur(5px);
+}
+
+.links-title{
+    color: var(--light-purple);
+    font-family: customFont, serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px solid var(--light-purple);
+    padding-bottom: 10px;
+}
+
+.links-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.link-card{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(147, 112, 219, 0.1);
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.link-card:hover{
+    transform: translateY(-2px);
+    border-color: var(--light-purple);
+    background: rgba(147, 112, 219, 0.2);
+    box-shadow: 0 5px 15px var(--subtle-glow);
+}
+
+.link-icon{
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.link-text h3{
+    color: var(--light-purple);
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+}
+
+.link-text p{
+    color: #ccc;
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+/*#endregion*/
+
+/* =============================
 Footer
 =============================== */
 /* #region Footer */
@@ -479,6 +609,7 @@ Footer
     text-align: center;
     background: var(--dark-bg);
     padding: 8px 0;
+    margin-top: 45px;
     gap: 4px;
     border-top: 1px solid rgba(147, 112, 219, 0.3);
     width: 100%;
@@ -524,6 +655,29 @@ Mobile Device Support
     .navbar{
         flex-wrap: wrap;
         gap: 10px;
+    }
+
+    .intro-section{
+        flex-direction: column-reverse;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    .profile-side{
+        flex: 0 0 auto;
+    }
+
+    .profile-image{
+        max-width: 250px;
+    }
+
+    .intro-text h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .intro-text p{
+        font-size: 1rem;
     }
     
     .project-grid{
@@ -579,6 +733,28 @@ Mobile Device Support
     
     .modal-link{
         align-self: flex-start;
+    }
+
+    .links-section{
+        padding: 30px 20px;
+    }
+
+    .links-title{
+        font-size: 2rem;
+    }
+
+    .links-grid{
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .link-card{
+        padding: 15px;
+    }
+
+    .link-icon{
+        width: 35px;
+        height: 35px;
     }
 }
 /* #endregion */
