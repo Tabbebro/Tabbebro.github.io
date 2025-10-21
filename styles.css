@@ -16,6 +16,8 @@ html{
     height: 100%;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
 *, *:before, *:after{
     box-sizing: inherit;
@@ -27,9 +29,11 @@ body {
     color: #ffffff;
     margin: 0;
     position: relative;
-    min-height: 100%;
+    min-height: 100vh;
     line-height: 1.7;
     font-size: 18px;
+    display: flex;
+    flex-direction: column;
 }
 
 .body-bg-image{
@@ -40,6 +44,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-color: var(--dark-bg);
 }
 
 .body-loading{
@@ -70,6 +75,7 @@ body {
     text-align: left;
     position: relative;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .header h1{
@@ -98,6 +104,7 @@ NavBar
     border-bottom: 1px solid #333;
     padding: 8px 0;
     gap: 30px;
+    flex-shrink: 0;
 }
 
 .navbar a{
@@ -134,6 +141,7 @@ Grid
     gap: 20px;
     width: 90%;
     margin: 40px auto;
+    flex: 1;
 }
 
 .project-box{
@@ -273,12 +281,12 @@ Grid
 }
 
 .gallery-list::-webkit-scrollbar-thumb {
-    background: var(--indigo-accent);
+    background: var(--light-purple);
     border-radius: 3px;
 }
 
 .gallery-list::-webkit-scrollbar-thumb:hover {
-    background: var(--indigo-light);
+    background: var(--light-purple);
 }
 
 .gallery-item {
@@ -358,7 +366,7 @@ Grid
 
 .modal-link{
     background: rgba(147, 112, 219, 0.1);
-    color: var(--indigo-light);
+    color: var(--light-purple);
     text-decoration: none;
     padding: 6px 14px;
     border-radius: 20px;
@@ -376,10 +384,10 @@ Grid
 }
 
 .modal-link:hover{
-    background: var(--indigo-light);
+    background: var(--light-purple);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px var(--indigo-glow);
+    box-shadow: 0 6px 15px var(--subtle-glow);
     font-weight: 600;
     border-width: 1px;
     padding: 6px 14px;
@@ -440,36 +448,37 @@ Footer
     align-items: center;
     text-align: center;
     background: var(--dark-bg);
-    padding: 20px 0;
-    gap: 10px;
+    padding: 8px 0;
+    gap: 4px;
+    border-top: 1px solid rgba(147, 112, 219, 0.3);
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
 }
 
 .footer-content{
     display: flex;
     justify-content: center;
-    gap: 20px;
-}
-
-.footer-content a{
-    display: block;
-    color: white;
-    text-decoration: none;
+    gap: 12px;
 }
 
 .footer-info{
-    color: white;
-    font-size: 14px;
+    color: #ccc;
+    font-size: 11px;
+    opacity: 0.8;
 }
 
 .footer-image {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     vertical-align: middle;
-    transition: filter 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
+    opacity: 0.7;
 }
 
 .footer-image:hover {
-    transform: scale(1.2);
+    opacity: 1;
+    transform: translateY(-2px);
 }
 /* #endregion */
 
