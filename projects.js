@@ -1,4 +1,20 @@
 const projects = [
+    // ==============================================
+    { // Shattered Bride
+        title: "Shattered Bride",
+        image: "images/projects/SB/SB_thumb.png",
+        video: "",
+        gallery: [""],
+        engine: "Unity",
+        engineIcon: "images/icons/unity.svg",
+        platform: "PC",
+        status: "Released",
+        storeIcon: "images/icons/steam.svg",
+        description: "Write New Description Here",
+        link: "https://store.steampowered.com/app/3565320/Shattered_Bride/",
+        isGameJam: false
+    },
+    // ==============================================
     { // Time Thrall
         title: "Time Thrall",
         image: "images/projects/TimeThrall/TT_Thumb.png",
@@ -13,8 +29,8 @@ const projects = [
         status: "Unreleased",
         storeIcon: "images/icons/no.svg",
         description: "Write New Description Here",
-        extra: "Write Extras Here",
-        link: ""
+        link: "",
+        isGameJam: false
     }, 
     // ==============================================
     { // Arena Shooter Supreme
@@ -28,8 +44,8 @@ const projects = [
         status: "Unreleased",
         storeIcon: "images/icons/no.svg",
         description: "Write New Description Here",
-        extra: "Write Extras Here",
-        link: ""
+        link: "",
+        isGameJam: false
     },
     // ==============================================
     { // Sunescape
@@ -47,8 +63,8 @@ const projects = [
         status: "Released (Itch.Io)",
         storeIcon: "images/icons/itch.svg",
         description: "Write New Description Here",
-        extra: "Write Extras Here",
-        link: "https://rockatana.itch.io/sunescape"
+        link: "https://rockatana.itch.io/sunescape",
+        isGameJam: false
     },
     // ==============================================
     { // MehuSim
@@ -66,8 +82,8 @@ const projects = [
         status: "Released (Itch.Io)",
         storeIcon: "images/icons/itch.svg",
         description: "Write New Description Here",
-        extra: "Write Extras Here",
-        link: "https://kuuttisnu.itch.io/mehusim"
+        link: "https://kuuttisnu.itch.io/mehusim",
+        isGameJam: false
     },
     // ==============================================
     { // Moo Moo Madness
@@ -81,8 +97,8 @@ const projects = [
         status: "Released (Playstore)",
         storeIcon: "images/icons/playstore.svg",
         description: "Write New Description Here",
-        extra: "Write Extras Here",
-        link: "https://play.google.com/store/apps/details?id=com.KulkuriGames.MooMooMadness&hl=en_US"
+        link: "https://play.google.com/store/apps/details?id=com.KulkuriGames.MooMooMadness&hl=en_US",
+        isGameJam: false
     },
     // ==============================================
     { // Entitled Roguelike Project (ERP) 
@@ -100,8 +116,8 @@ const projects = [
         status: "Released (Itch.Io)",
         storeIcon: "images/icons/itch.svg",
         description: "Write New Description Here",
-        extra: "Write Extras Here",
-        link: "https://hunts.itch.io/erp"
+        link: "https://hunts.itch.io/erp",
+        isGameJam: false
     },
     // ==============================================
     { // Shank Simulator
@@ -115,10 +131,10 @@ const projects = [
         status: "Released (Itch.Io)",
         storeIcon: "images/icons/itch.svg",
         description: "Write New Description Here",
-        extra: "Write Extras Here",
-        link: "https://hunts.itch.io/shank-simulator"
+        link: "https://hunts.itch.io/shank-simulator",
+        isGameJam: false
     },
-    
+    /*
     // ==============================================
     { // Empty
         title: "",
@@ -131,7 +147,8 @@ const projects = [
         status: "",
         storeIcon: "",
         description: "Write New Description Here",
-        extra: "Write Extras Here",
-        link: ""
+        link: "",
+        isGameJam: false
     }
+    */
 ]

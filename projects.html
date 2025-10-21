@@ -14,14 +14,27 @@
 
         <div class="navbar">
             <p><a href="index.html"><img src="images/icons/home.svg" alt="home" class="imageNavBar">Home</a></p>
-            <p><a href="projects.html"><img src="images/icons/game.svg" alt="projects" class="imageNavBar">Projects</a></p>
-            <p><a href="jam.html"><img src="images/icons/jam.svg" alt="jams" class="imageNavBar">Jams</a></p>
+            <p><a href="projects.html"><img src="images/icons/game.svg" alt="projects" class="imageNavBar">Projects & Jams</a></p>
             <p><a href="contact.html"><img src="images/icons/contact.svg" alt="contact" class="imageNavBar">Links</a></p>
         </div>
 
         <!-- Project Grid -->
-         <div class="project-grid" id="projectGrid">
-            <!-- Project Boxes Here With JS -->
+         <div class="project-grid">
+            <!-- Main Projects -->
+            <div class="projects-section">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-container" id="projectGrid">
+                    <!-- Project Boxes Here With JS -->
+                </div>
+            </div>
+            
+            <!-- Jams -->
+            <div class="projects-section">
+                <h2 class="section-title">Game Jam</h2>
+                <div class="projects-container" id="jamGrid">
+                    <!-- Jam Boxes Here With JS -->
+                </div>
+             </div>
          </div>
 
          <!-- Pop Up / Modal -->
@@ -37,7 +50,7 @@
                         
                         <!-- Gallery below the video -->
                         <div id="modalGallery" class="modal-gallery" style="display: none;">
-                            <h3>More Media (Click To Enlarge)</h3>
+                            <h3>(Click To Enlarge)</h3>
                             <div class="gallery-list" id="galleryGrid"></div>
                         </div>
                     </div>
@@ -68,6 +81,7 @@
         </div>
 
         <script src="projects.js"></script>
+        <script src="jams.js"></script>
         <script src="game.js"></script>
     
     </body>

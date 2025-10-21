@@ -1,5 +1,4 @@
 // References
-const grid = document.getElementById("projectGrid");
 const modal = document.getElementById("projectModal");
 const modalVideoContainer = document.getElementById("modalVideoContainer");
 const modalVideo = document.getElementById("modalVideo");
@@ -7,7 +6,6 @@ const modalTitle = document.getElementById("modalTitle");
 const modalInfo = document.getElementById("modalInfo");
 const modalLink = document.getElementById("modalLink");
 const modalDescription = document.getElementById("modalDescription");
-const modalExtra = document.getElementById("modalExtra");
 const modalGallery = document.getElementById("modalGallery");
 const galleryGrid = document.getElementById("galleryGrid");
 const closeBtn = document.querySelector(".close");
@@ -24,18 +22,27 @@ document.body.appendChild(lightbox);
 const lightboxImg = lightbox.querySelector("img");
 const lightboxClose = lightbox.querySelector(".gallery-lightbox-close");
 
-// Generate Project Boxes
-projects.forEach((project, index) =>{
+// Combine both project arrays
+const allProjects = [...projects, ...jamProjects];
+
+// Generate Project Boxes - Separated by type
+allProjects.forEach((project, index) => {
     const box = document.createElement("div");
     box.className = "project-box";
     box.innerHTML = `<img src="${project.image}" alt="${project.title}"><h3>${project.title}</h3>`;
     box.addEventListener("click", () => openModal(index));
-    grid.appendChild(box);
+    
+    // Determine which grid to add to based on project type
+    if (project.isGameJam) {
+        document.getElementById("jamGrid").appendChild(box);
+    } else {
+        document.getElementById("projectGrid").appendChild(box);
+    }
 });
 
 // Open Modal
 function openModal(index){
-    const project = projects[index];
+    const project = allProjects[index];
     
     // TITLE
     modalTitle.textContent = project.title;
@@ -99,8 +106,6 @@ function openModal(index){
 
     // DESCRIPTION
     modalDescription.textContent = project.description;
-    // EXTRA
-    modalExtra.innerHTML = project.extra;
     
     if (project.link && project.link.trim() !== "") {
         modalLink.href = project.link;
@@ -166,6 +171,13 @@ function stopVideo(){
     }
 }
 
+// Function to clear active gallery items
+function clearGalleryActiveState() {
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.classList.remove('active');
+    });
+}
+
 // Lightbox functionality
 lightboxClose.onclick = () => {
     lightbox.style.display = "none";
@@ -178,9 +190,3 @@ lightbox.onclick = (e) => {
         clearGalleryActiveState();
     }
 };
-
-function clearGalleryActiveState(){
-    document.querySelectorAll('.gallery-item').forEach(item => {
-        item.classList.remove('active');
-    });
-}
