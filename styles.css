@@ -112,6 +112,7 @@ NavBar
 .navbar a:hover{
     color: var(--light-purple);
     background: rgba(147, 112, 219, 0.1);
+    transform: translateY(-2px);
 }
 
 .imageNavBar{
@@ -198,7 +199,6 @@ Grid
 
 .modal-content a{
     color: #ffb7ff;
-    text-decoration: underline;
 }
 
 .modal-body{
@@ -337,6 +337,7 @@ Grid
     font-size: 0.95rem;
     color: #ddd;
     flex: 1;
+    min-width: 200px;
 }
 
 .info-line{
@@ -353,22 +354,33 @@ Grid
 }
 
 .modal-link{
-    background: var(--accent-purple);
-    color: white;
+    background: rgba(147, 112, 219, 0.1);
+    color: var(--indigo-light);
     text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
     transition: all 0.3s ease;
     white-space: nowrap;
     align-self: flex-start;
-    margin-top: 0;
+    border: 1px solid rgba(147, 112, 219, 0.3);
+    display: inline-block;
+    line-height: 1.2;
+    min-width: 100px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .modal-link:hover{
-    transform: scale(1.02);
-    background: var(--light-purple);
+    background: var(--indigo-light);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px var(--indigo-glow);
+    font-weight: 600;
+    border-width: 1px;
+    padding: 6px 14px;
+
 }
 /* #endregion */
 
@@ -446,24 +458,15 @@ Footer
     font-size: 14px;
 }
 
-.footer-image{
-    width: 25px;
-    height: 25px;
+.footer-image {
+    width: 30px;
+    height: 30px;
     vertical-align: middle;
-    fill: white;
-    stroke: white;
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-.footer-image:hover{
-    fill: var(--light-purple);
-    stroke: var(--light-purple);
+.footer-image:hover {
     transform: scale(1.2);
-}
-
-.footer-image:hover g{
-    fill: var(--light-purple);
-    stroke: var(--light-purple);
 }
 /* #endregion */
 
