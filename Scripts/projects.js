@@ -4,7 +4,10 @@ const projects = [
         title: "Shattered Bride",
         image: "images/projects/SB/SB_thumb.png",
         video: "",
-        gallery: [""],
+        gallery: [
+            "images/projects/SB/SB_settings.gif",
+            "images/projects/SB/SB_pause.gif"
+        ],
         engine: "Unity",
         engineIcon: "images/icons/unity.svg",
         platform: "PC",

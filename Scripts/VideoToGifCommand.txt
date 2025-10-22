@@ -1,0 +1,5 @@
+Step1.
+for %f in (*.mp4) do ffmpeg -i "%f" -vf "fps=15,scale=720:-1:flags=lanczos,palettegen" "%~nf_palette.png"
+
+Step2.
+for %f in (*.mp4) do ffmpeg -i "%f" -i "%~nf_palette.png" -filter_complex "fps=15,scale=720:-1:flags=lanczos[x];[x][1:v]paletteuse" "%~nf.gif"
