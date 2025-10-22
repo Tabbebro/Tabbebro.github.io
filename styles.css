@@ -494,6 +494,7 @@ Grid
     color: white;
     font-size: 28px;
     cursor: pointer;
+    z-index: 1001;
 }
 /*#endregion*/
 
@@ -765,6 +766,19 @@ Mobile Device Support
     .link-icon{
         width: 35px;
         height: 35px;
+    }
+
+    .close{
+        top: 15px;
+        right: 15px;
+        font-size: 24px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1001;
     }
 }
 /* #endregion */

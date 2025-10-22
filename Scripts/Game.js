@@ -1,5 +1,6 @@
 // References
 const modal = document.getElementById("projectModal");
+const modalContent = document.querySelector('.modal-content');
 const modalVideoContainer = document.getElementById("modalVideoContainer");
 const modalVideo = document.getElementById("modalVideo");
 const modalTitle = document.getElementById("modalTitle");
@@ -42,6 +43,9 @@ allProjects.forEach((project, index) => {
 
 
 function openModal(index){
+    modal.scrollTop = 0;
+    modalContent.scrollTop = 0;
+
     const project = allProjects[index];
     
     // TITLE
@@ -132,6 +136,13 @@ function openModal(index){
     }
     
     modal.style.display = "flex";
+
+    if(window.innerWidth <= 900){
+        setTimeout(() => {
+            modal.scrollTop = 0;
+            modalContent.scrollTop = 0;
+        }, 10);
+    }
 }
 
 closeBtn.onclick = () => {
