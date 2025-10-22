@@ -21,7 +21,7 @@ const projects = [
             ],
             learnings: [
                 "What it takes to put a game into Steam",
-                "What happens to a game when you do not market you big project"
+                "What happens to a game when you do not market your big project"
             ]
         },
         link: "https://store.steampowered.com/app/3565320/Shattered_Bride/",
