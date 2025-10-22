@@ -97,7 +97,7 @@ NavBar
 =============================== */
 /* #region NavBar */
 .navbar{
-    background-color: var(--darker-bg);
+    background-color: var(--dark-bg);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

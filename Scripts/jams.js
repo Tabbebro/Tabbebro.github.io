@@ -3,7 +3,7 @@ const jamProjects = [
     // ==============================================
     { // Franc Robber
         title: "Franc Robber",
-        image: "images/jams/Franc_thumb.png",
+        image: "images/jams/Franc/Franc_thumb.png",
         video: "",
         gallery: [""],
         engine: "Unity",
@@ -32,7 +32,7 @@ const jamProjects = [
     // ==============================================
     { // Meep Stranding
         title: "Meep Stranding",
-        image: "images/jams/Meep_thumb.png",
+        image: "images/jams/Meep/Meep_thumb.png",
         video: "",
         gallery: [""],
         engine: "Unity",
@@ -57,7 +57,7 @@ const jamProjects = [
     // ==============================================
     { // Noki
         title: "Noki",
-        image: "images/jams/Noki_thumb.png",
+        image: "images/jams/Noki/Noki_thumb.png",
         video: "",
         gallery: [""],
         engine: "Unity",
@@ -83,10 +83,10 @@ const jamProjects = [
     // ==============================================
     { // Me When Bubbles
         title: "Me When Bubbles",
-        image: "images/jams/Bubbles_thumb.png",
+        image: "images/jams/Bubbles/Bubbles_thumb.png",
         video: "https://www.youtube.com/watch?v=Uq_jVSNqYTc",
         gallery: [
-            "images/jams/MeWhenBubbles.gif"
+            "images/jams/Bubbles/MeWhenBubbles.gif"
         ],
         engine: "Unity",
         engineIcon: "images/icons/unity.svg",
@@ -115,10 +115,10 @@ const jamProjects = [
     // ==============================================
     { // Blind In Tuonela
         title: "Blind In Tuonela",
-        image: "images/jams/Tuonela_thumb.png",
+        image: "images/jams/Tuonela/Tuonela_thumb.png",
         video: "https://www.youtube.com/watch?v=C-lFKUjLges",
         gallery: [
-            "images/jams/tuonela_overwiev.gif",
+            "images/jams/Tuonela/tuonela_overwiev.gif",
         ],
         engine: "Unity",
         engineIcon: "images/icons/unity.svg",
@@ -144,11 +144,11 @@ const jamProjects = [
     // ==============================================
     { // OINK OINK BLASTER
         title: "OINK OINK BLASTER",
-        image: "images/jams/OinkOink_thumb.png",
+        image: "images/jams/Oink/OinkOink_thumb.png",
         video: "",
         gallery: [
-            "images/jams/OinkOink_enemy.gif",
-            "images/jams/OinkOink_health.gif"
+            "images/jams/Oink/OinkOink_enemy.gif",
+            "images/jams/Oink/OinkOink_health.gif"
         ],
         engine: "Godot",
         engineIcon: "images/icons/godot.svg",
@@ -173,10 +173,10 @@ const jamProjects = [
     // ==============================================
     { // MadGoat
         title: "MadGoat",
-        image: "images/jams/MadGoat_thumb.png",
+        image: "images/jams/Madgoat/MadGoat_thumb.png",
         video: "https://www.youtube.com/watch?v=2p-w0h1KEcA",
         gallery: [
-            "images/jams/Madgoat.gif"
+            "images/jams/Madgoat/Madgoat.gif"
         ],
         engine: "Unity",
         engineIcon: "images/icons/unity.svg",
@@ -199,12 +199,12 @@ const jamProjects = [
     // ==============================================
     { // Iron Mice
         title: "Iron Mice From Hell",
-        image: "images/jams/IronMice_thumb.png",
+        image: "images/jams/Ironmice/IronMice_thumb.png",
         video: "",
         gallery: [
-            "images/jams/Ironmice_Menu.gif",
-            "images/jams/Ironmice_player.gif",
-            "images/jams/IronMice_ratings.png"
+            "images/jams/Ironmice/Ironmice_Menu.gif",
+            "images/jams/Ironmice/Ironmice_player.gif",
+            "images/jams/Ironmice/IronMice_ratings.png"
         ],
         engine: "Unity",
         engineIcon: "images/icons/unity.svg",
