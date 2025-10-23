@@ -143,7 +143,7 @@ const jamProjects = [
             ],
             learnings: [
                 "Working with optimization",
-                "Basics of online multiplayer in unity"
+                "Basics of online multiplayer in Unity"
             ]
         },
         link: "https://humsteri.itch.io/blind-in-tuonela",
