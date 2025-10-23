@@ -137,7 +137,7 @@ const jamProjects = [
             overview: "Submission for a local Halloween Jam hosted by IGDA Kajaani",
             role: "Programmer",
             contributions:[
-                "Coloring & Optimisation of the dots",
+                "Coloring & Optimization of the dots",
                 "Weapon switching",
                 "Item Interaction"
             ],
