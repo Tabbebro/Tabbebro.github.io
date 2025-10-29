@@ -1,31 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<url>
-  <loc>https://tabbebro.github.io/</loc>
-  <lastmod>2025-10-29</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://tabbebro.github.io/index.html</loc>
-  <lastmod>2025-10-29</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tabbebro.github.io/projects.html</loc>
-  <lastmod>2025-10-29</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tabbebro.github.io/links.html</loc>
-  <lastmod>2025-10-29</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tabbebro.github.io/Downloadable/CV_Taavi_Korhonen_2025.pdf</loc>
-  <lastmod>2025-10-29</lastmod>
-  <priority>0.80</priority>
-</url>
+  <url>
+    <loc>https://tabbebro.github.io/</loc>
+    <lastmod>2025-10-29</lastmod>
+    <priority>1.00</priority>
+  </url>
 
+  <url>
+    <loc>https://tabbebro.github.io/projects.html</loc>
+    <lastmod>2025-10-29</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://tabbebro.github.io/links.html</loc>
+    <lastmod>2025-10-29</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://tabbebro.github.io/Downloadable/CV_Taavi_Korhonen_2025.pdf</loc>
+    <lastmod>2025-10-29</lastmod>
+    <priority>0.80</priority>
+  </url>
 
 </urlset>
