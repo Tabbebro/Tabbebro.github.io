@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://tabbebro.github.io/sitemap.xml
